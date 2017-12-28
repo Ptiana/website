@@ -1,0 +1,28 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>备忘录</title>
+
+        <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all">
+
+	</head>
+	<body>
+		<div id="all">
+			<div id="head">
+
+			</div>
+			<div id= "conent ">
+                {% for schedule in schedule_list %}
+				<p>{{ schedule.items_title }}</p>
+                 {% endfor %}
+			</div>
+			<div id="foot">
+
+			</div>
+		</div>
+
+	</body>
+</html>
